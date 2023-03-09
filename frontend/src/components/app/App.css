@@ -1,0 +1,59 @@
+
+.banner {
+  min-width: 150px;
+}
+
+.banner h4{
+  line-height: 1.8;
+  color: rgb(80, 79, 79);
+}
+
+.banner b{
+  color: #33C3F0;
+}
+
+.banner a{
+  text-decoration: none;
+}
+
+.line hr{
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.menu {
+  margin-top: 20px;
+}
+
+.search {
+  margin-top: -10px;
+}
+
+@media screen and (max-width: 550px) {
+  .menu{
+      margin-top: -20px;
+  }
+
+  .banner h4{
+      line-height: 2;
+      font-size: 3.5rem;
+  }
+
+  .search {
+      margin-top: 10px;
+  }
+
+  .line hr{
+      margin-top: 6px;
+      margin-bottom: 20px;
+  }
+
+  .movie-card {
+      width: 320px;
+      height: 380px;
+  }
+
+  .movie-title {
+      margin-top: -40px;
+  }
+}

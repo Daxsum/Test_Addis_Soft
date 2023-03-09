@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  frontend:
+    depends_on:
+      - backend
+    build: ./frontend
+    ports:
+      - 3000:3000
+    environment:
+      - REACT_APP_BASE_URL=http://localhost:5000
+  backend:
+    depends_on:
+      - DB
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb+srv://kalab:kalgoldenjet@axsumitequasar.zcbw5.mongodb.net/AddisSoft
+    volumes:
+      - ./backend:/app
+    command: ./docker-entrypoint.sh
+  DB:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - REDUX:/data/db
+volumes:
+  REDUX:
